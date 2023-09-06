@@ -31,6 +31,7 @@ const LoginComponent=(props)=>{
     }
     useEffect(()=>{
         getUser() && props.history.push('/') 
+        // eslint-disable-next-line
     },[])
 
     return(

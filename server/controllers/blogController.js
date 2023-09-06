@@ -6,7 +6,6 @@ exports.create = async (req,res) => {
     const {title,content,author} = req.body;
     let slug = slugify(title);
 
-
     if(!slug)slug = uuidv4();
 
     switch(true){
@@ -47,7 +46,6 @@ exports.singleBlog = async (req,res) =>{
     }
 }
 
-//ลบข้อมูลบทความ โดยอ้างอิงตาม slug
 exports.remove = async (req,res) =>{
     try{
         const {slug} = req.params
